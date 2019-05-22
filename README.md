@@ -1,5 +1,6 @@
 # AugBoost
 Gradient Boosting Enhanced with Step-Wise Feature Augmentation. 
+Based on the 2019 IJCAI paper by Philip Tannor and Lior Rokach.
 ## About
 The code in this repository is based heavily on scikit-learn's 'gradient_boosting.py'. 
 We started this as a fork of sklearn, but split away when we saw it would be more convenient. Thanks! =]
@@ -34,5 +35,5 @@ model.fit(X_train, y_train)
 model.predict(X_val)
 ```
 
-In the file 'notebook for experiments.ipynb' there is example of code for running experiments with AugBoost.
+In the file 'notebook for experiments.ipynb' there is an example of code for running experiments with AugBoost.
 
