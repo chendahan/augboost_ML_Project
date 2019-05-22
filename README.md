@@ -14,7 +14,7 @@ And a number of small packages which are included in Anaconda.
 The most important prerequisite is probably the version of sklearn, although we haven't checked if any of them are necessary.
 
 ## Getting Started
-After cloning the repository, the 2 modules in can be imported using these lines of code:
+After cloning the repository, the 2 modules in it can be imported using these lines of code:
 ```python
 from AugBoost import AugBoostClassifier as ABC
 from AugBoost import AugBoostRegressor as ABR    #regression module has an issue and doesn't work yet
