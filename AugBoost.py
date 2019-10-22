@@ -780,25 +780,25 @@ class AugBoostClassifier(AugBoostBase):
         return y
 
     def decision_function(self, X):
-        return self.classifier.decision_function(self, X)
+        return self.classifier.decision_function(X)
 
     def staged_decision_function(self, X):
-        return self.classifier.staged_decision_function(self, X)
+        return self.classifier.staged_decision_function(X)
 
     def predict(self, X):
-        return self.classifier.predict(self, X)
+        return self.classifier.predict(X)
 
     def staged_predict(self, X):
-        return self.classifier.staged_predict(self, X)
+        return self.classifier.staged_predict(X)
 
     def predict_proba(self, X):
         return self.classifier.predict_proba(X)
 
     def predict_log_proba(self, X):
-        return self.classifier.predict_log_proba(self, X)
+        return self.classifier.predict_log_proba(X)
 
     def staged_predict_proba(self, X):
-        return self.classifier.staged_predict_proba(self, X)
+        return self.classifier.staged_predict_proba(X)
 
 
 class AugBoostRegressor(AugBoostBase):
