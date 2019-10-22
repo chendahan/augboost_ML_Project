@@ -33,6 +33,7 @@ And then train and predict like this:
 ```python
 model.fit(X_train, y_train)
 model.predict(X_val)
+model.score(X_val,y_val)
 ```
 
 In the file 'notebook for experiments.ipynb' there is an example of code for running experiments with AugBoost.
