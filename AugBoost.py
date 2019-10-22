@@ -799,7 +799,10 @@ class AugBoostClassifier(AugBoostBase):
 
     def staged_predict_proba(self, X):
         return self.classifier.staged_predict_proba(X)
-
+    def score(self,X,Y):
+        predict_result = self.classifier.predict(X)
+        acc = sum(predict_result==Y)/len(Y)
+        return acc
 
 class AugBoostRegressor(AugBoostBase):
     """AugBoost for regression. AugBoost builds an additive model in a forward stage-wise fashion, while augmenting the features in between "boosts" using neural networks, PCA or random projections
@@ -1092,10 +1095,10 @@ class AugBoostRegressor(AugBoostBase):
         self.regressor = GradientBoostingRegressor(**params)
 
     def predict(self, X):
-        return self.regressor.predict(self, X)
+        return self.regressor.predict(X)
 
     def staged_predict(self, X):
-        return self.regressor.staged_predict(self, X)
+        return self.regressor.staged_predict( X)
 
     def apply(self, X):
-        return self.regressor.apply(self, X)
+        return self.regressor.apply(X)
