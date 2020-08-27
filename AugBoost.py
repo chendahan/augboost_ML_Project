@@ -300,7 +300,7 @@ class AugBoostBase(BaseGradientBoosting):
                                       sample_weight[~sample_mask])
 
             # Change X_original to the X you want - over here
-            print('training estimator #' + str(i))
+            # print('training estimator #' + str(i))
             loss = self.loss_
             residuals = loss.negative_gradient(y,
                                                y_pred)  # this line is good for regression! hasn't been checked for classification, it may work anyway
