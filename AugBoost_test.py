@@ -15,7 +15,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # TODO : change path according to the location of the datasets files
-dir_name = "C:\\Users\\user1\\Downloads\\classification_datasets-20200531T065549Z-001\\classification_datasets"
+dir_name = ""
 
 # model params- used for hyperparameter tuning
 model_params = {
