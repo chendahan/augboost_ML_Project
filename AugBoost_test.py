@@ -116,7 +116,7 @@ def sanity_check(data, folds):
         cls_count += 1
         # if num samples from class is less than num of folds, we drop this class
         if cnt < folds:
-            data = data[data[data.columns[-1]] != cls]
+            data.drop(data[data[data.columns[-1]] == cls].index, inplace=True)
             cls_count -= 1
             dropped = True
     #
